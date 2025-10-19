@@ -10,26 +10,16 @@ This MySQL database serves as the centralized backbone for all operational data 
 It provides a single source of truth for managing farmers, projects, and carbon credits across multiple regions.
 
 Business Objectives
--Single Source of Truth — Unify farmer, project, and carbon credit data in one platform.  
--Streamlined Operations — Reduce farmer onboarding time from **3 days to 4 hours**.  
-- 📊 **Real-time Analytics**able live dashboards for stakeholders, registries, and carbon buyers.  
--Audit Compliance** — Align with international carbon standards such as **Verra** and **Gold Standard**.
+-Single Source of Truth (Unify farmer, project, and carbon credit data in one platform).  
+-Streamlined Operations (Reduce farmer onboarding time from 3 days to 4 hours).  
+- Real-time Analytics (Enable live dashboards for stakeholders, registries, and carbon buyers).  
+-Audit Compliance (Align with international carbon standards such as Verra and Gold Standard).
 
----
-
-## 🗄️ Database Schema Documentation
-
-### 📊 Entity Relationship Diagram
-*(Include ERD image here, e.g. `/docs/foovante_erd.png`)*
-
-The schema follows a **modular design** for scalability and easy integration with APIs or BI tools.
-
----
-
-## 🏗️ Core Table Structures
-
-### 1️⃣ User Management — `users`
-```sql
+ Database Schema Documentation
+Entity Relationship Diagram
+The schema follows a modular design for scalability and easy integration with APIs or BI tools.
+Core Table Structures
+ 1. User Management — `users`
 CREATE TABLE users (
     user_id INT AUTO_INCREMENT PRIMARY KEY,
     email VARCHAR(255) UNIQUE NOT NULL,
@@ -42,7 +32,7 @@ CREATE TABLE users (
 );
 
 Purpose: Manages system users with role-based access control.
-2️⃣ Farmer Management — farmers
+2. Farmer Management — farmers
 
 CREATE TABLE farmers (
     farmer_id INT AUTO_INCREMENT PRIMARY KEY,
@@ -59,7 +49,7 @@ CREATE TABLE farmers (
 );
 
 Purpose: Stores farmer profiles with geolocation and land details for project mapping.
-3️⃣ Project Management — projects
+3.Project Management — projects
 
 CREATE TABLE projects (
     project_id INT AUTO_INCREMENT PRIMARY KEY,
@@ -75,7 +65,7 @@ CREATE TABLE projects (
 );
 
 Purpose: Tracks carbon projects from pre-verification to credit issuance.
-4️⃣ Carbon Credit Tracking — carbon_credits
+4. Carbon Credit Tracking — carbon_credits
 
 CREATE TABLE carbon_credits (
     credit_id INT AUTO_INCREMENT PRIMARY KEY,
